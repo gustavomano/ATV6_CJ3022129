@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Xml;
 
-namespace ATV5_CJ3022129;
+namespace ATV6_CJ3022129;
 
 public static class Program
 {
@@ -69,26 +70,26 @@ public static class Program
 
                 w++;
 
-                    if (w % 2 == 0)
+                if (w % 2 == 0)
 
-                    {
+                {
 
-                        Console.WriteLine(w);
+                    Console.WriteLine(w);
 
-                    }
+                }
 
-                
+
 
             }
 
             //Exercício 4
 
-            int n2 = 0;
+            int v = 0;
 
-            while (n2 < 200) 
+            while (v < 200)
 
             {
-                n2++;
+                v++;
                 Console.WriteLine("Digite um valor");
 
                 int n3 = int.Parse(Console.ReadLine());
@@ -99,11 +100,11 @@ public static class Program
 
                     Console.WriteLine(n3);
 
-                    n2 += n3;
+                    v += n3;
 
                 }
 
-                Console.WriteLine("A soma dos números é {0}", n2);
+                Console.WriteLine("A soma dos números é {0}", v);
 
             }
 
@@ -113,7 +114,7 @@ public static class Program
 
             Console.WriteLine("Os divisores de {0} são: ", numero);
             int ii = 1;
-            while (ii <= numero) 
+            while (ii <= numero)
             {
                 ii++;
                 if (numero % ii == 0)
@@ -132,9 +133,10 @@ public static class Program
             int numero1 = int.Parse(Console.ReadLine());
             maior = numero1;
             menor = numero1;
-
-            for (int i = 2; i <= 10; i++)
+            int i = 1;
+            while (i < 10)
             {
+                i++;
                 Console.WriteLine($"Digite o {i}° número: ");
                 numero1 = int.Parse(Console.ReadLine());
 
@@ -168,7 +170,7 @@ public static class Program
 
                 if (n9 == 0)
                 {
-                    break; //
+                    break; 
                 }
 
                 if (n9 % 2 == 0)
